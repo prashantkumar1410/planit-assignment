@@ -34,3 +34,13 @@ test {
     // Use TestNG for unit tests
     useTestNG()
 }
+task SanityTests(type: Test) {
+    dependsOn clean, compileTestJava
+    useTestNG {
+        includeGroups 'Sanity_Tests'
+        outputDirectory = file("$buildDir/SanityTestsResults")
+        parallel = "classes"
+        threadCount = 1
+        useDefaultListeners = false
+    }
+}

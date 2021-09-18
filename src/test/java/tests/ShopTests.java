@@ -1,9 +1,10 @@
 package tests;
 
 import org.testng.annotations.Test;
+import utils.Categories;
 
 public class ShopTests extends BaseTest {
-    @Test
+    @Test(groups = Categories.SANITY)
     public void verifyValidationErrorAndSuccessfulSuccessMsgOnContactPage() throws InterruptedException {
         homePage
                 .navigateToShopPage()

@@ -1,10 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+import utils.Categories;
 
 public class ContactTests extends BaseTest {
 
-    @Test
+    @Test(groups = Categories.SANITY)
     public void verifyValidationErrorAndSuccessfulSuccessMsgOnContactPage() {
         homePage
                 .navigateToContactPage()
@@ -14,7 +15,7 @@ public class ContactTests extends BaseTest {
                 .clickSubmit()
                 .verifySuccessMessage();
     }
-    @Test
+    @Test(groups = Categories.SANITY)
     public void verifyMandatoryFieldErrorOnContactPage() {
         homePage
                 .navigateToContactPage()
