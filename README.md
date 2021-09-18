@@ -19,7 +19,7 @@ This project is to demonstrate creating a test framework for amazon.com
 
 **Testing Notes:**
 
-* Tested on platform Mac 10.11.6 and browser Chrome 56.0.
+* Tested on platform browser Chrome 93 and above.
 
 **Assumption made**
 
