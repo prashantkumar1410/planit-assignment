@@ -28,12 +28,6 @@ public class ContactPage extends LoadableComponent<ContactPage> {
         this.parent = parent;
     }
 
-
-    public ContactPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-
     @Override
     protected void load() {
         driver.get(new PropertyReader().readProperty("applicationURL"));

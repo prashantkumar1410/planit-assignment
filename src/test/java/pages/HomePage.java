@@ -11,6 +11,7 @@ public class HomePage extends LoadableComponent<HomePage> {
 
     WebDriver driver;
     private By contact = By.linkText("Contact");
+    private By shop = By.linkText("Shop");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -30,6 +31,11 @@ public class HomePage extends LoadableComponent<HomePage> {
     public ContactPage navigateToContactPage() {
         driver.findElement(contact).click();
         return new ContactPage(driver, this);
+    }
+
+    public ShopPage navigateToShopPage() {
+        driver.findElement(shop).click();
+        return new ShopPage(driver,this);
     }
 }
 
