@@ -2,7 +2,7 @@
 
 **Introduction:**
 
-This project is to demonstrate creating a test framework for amazon.com
+This project is to demonstrate creating a test framework for http://jupiter.cloud.planittesting.com/
 * IDE Used: **Intellij** Community Edition
 * Programming language: **JAVA**
 * Browser Driver Tool: **Selenium**
