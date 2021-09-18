@@ -1,29 +1,20 @@
 package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import utils.PropertyReader;
+
 import static org.testng.AssertJUnit.assertTrue;
 
 public class HomePage extends LoadableComponent<HomePage> {
 
     WebDriver driver;
-    private By searchTextBoxBefore=By.id("twotabsearchtextbox");
-    private By submitTextBefore=By.className("nav-input");
-    @FindBy(id = "twotabsearchtextbox")
-    private WebElement searchTextBox;
-
-    @FindBy(className = "nav-input")
-    private WebElement submitText;
-    private Object LoadableComponent;
+    private By contact = By.linkText("Contact");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-
-
 
     @Override
     protected void load() {
@@ -36,8 +27,9 @@ public class HomePage extends LoadableComponent<HomePage> {
                 new PropertyReader().readProperty("applicationURL")));
     }
 
-    public void navigateToContactPage() {
-
+    public ContactPage navigateToContactPage() {
+        driver.findElement(contact).click();
+        return new ContactPage(driver, this);
     }
 }
 

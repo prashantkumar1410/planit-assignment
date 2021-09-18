@@ -6,6 +6,6 @@ public class ContactTests extends BaseTest {
 
     @Test
     public void verifyValidationErrorOnContactPage() {
-        homePage.navigateToContactPage();
+        homePage.navigateToContactPage().clickSubmit();
     }
 }
